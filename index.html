@@ -16,31 +16,42 @@
 </head>
 <body>
 <body>
+<canvas id="bg-particles">
+</canvas>
 <header class="site-header">
     <div class="logo">
         <span>ZM</span>
         <div>
             <strong>Zourba Media</strong>
-            <small>Erode performance team</small>
         </div>
     </div>
-    <nav>
-        <a href="#how-it-works">How it works</a>
-        <a href="#proof">Results</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <a class="cta" href="#contact">Talk to us</a>
+    
+<!-- Hamburger (shown only on mobile via CSS) -->
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Nav wrapper for desktop + mobile -->
+  <nav class="site-nav">
+    <a href="#how-it-works">How it works</a>
+    <a href="#proof">Results</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a class="cta header-cta" href="#contact">Talk to us</a>
 </header>
 
 <main>
     <section class="hero">
         <div class="hero-copy">
-            <p class="tag">Ads that everyday buyers understand</p>
-            <h1>We run simple online campaigns that bring you more calls, store visits, and orders.</h1>
-            <p>Whether you sell sarees, services, or fresh produce, we plan, launch, and track high-performing ads in Tamil and English—so you see exactly what you spend and what you earn.</p>
+            <p class="tag">Built for Erode region businesses</p>
+            <h1>Vilambaram illainga... its pure perfomance strategy for calls, orders, repeatu</h1>
+            <p>Engayo Chennai, Bengaluru nu alaiyama build with our Erode team that speaks your language, knows your seasons, and visits your store</p>
             <div class="hero-actions">
-                <a class="cta" href="#contact">Get a free plan</a>
-                <button class="link" data-scroll="#how-it-works">See how it works</button>
+                <a class="cta" href="#contact">PESUVOM VAANGA</a>
+                <button class="link" data-scroll="#how-it-works">Just Oru call</button>
             </div>
             <div class="hero-stats">
                 <article>
@@ -57,15 +68,15 @@
                 </article>
             </div>
         </div>
-        <div class="hero-card">
-            <p class="eyebrow">You get</p>
-            <ul>
-                <li><i class="ph-check-circle"></i> Ready-to-use ad designs and text</li>
-                <li><i class="ph-check-circle"></i> Landing pages that explain your offer clearly</li>
-                <li><i class="ph-check-circle"></i> Weekly reports in plain language</li>
-            </ul>
-            <p class="note">“The team handled everything end-to-end. We just answered calls.” — Priya, textile store owner</p>
-        </div>
+        <div class="hero-card image-slider">
+            <div class="slider-track">
+    <img class="slider-slide" src="https://i.ibb.co/hFR8B3Qk/Sleek-Poster-with-Cityscape-and-Smartphones.png">
+    <img class="slider-slide" src="https://i.ibb.co/TDRwbMtP/2.webp">
+    <img class="slider-slide" src="https://i.ibb.co/5XZ77Mfm/3.webp">
+    <img class="slider-slide" src="https://i.ibb.co/wrjYfsCj/4.webp">
+  </div>
+</div>
+
     </section>
 
     <section class="how" id="how-it-works">
@@ -98,19 +109,28 @@
         <h2>Real stories from nearby businesses</h2>
         <div class="proof-cards">
             <article>
-                <p class="tag">Bedding store</p>
-                <h3>“We sold 137 extra mattresses in one month.”</h3>
-                <p>We ran Google search ads and WhatsApp follow-ups for a family-owned store on Brough Road.</p>
+		<div class="testimonial-logos">
+    		<img src="https://i.ibb.co/rKhxyvHz/nutz.webp">
+  		</div>
+                <p class="tag">Nutz Technovation</p>
+                <h3>“We reached our perfect clients”</h3>
+                <p>We get perfect leads for our agency with promising calls and orders around erode region</p>
             </article>
             <article>
-                <p class="tag">Agri input dealer</p>
+		<div class="testimonial-logos">
+    		<img src="https://i.ibb.co/RkNCtv3c/gyf.webp">
+  		</div>
+                <p class="tag">Grow your Fams</p>
                 <h3>“Farmers now call us instead of sales reps chasing them.”</h3>
                 <p>A Landing page in Tamil plus short reels explained the offer and doubled qualified calls.</p>
             </article>
             <article>
-                <p class="tag">Training institute</p>
-                <h3>“Batch seats fill up before we print a single poster.”</h3>
-                <p>Meta leads delivered to a simple CRM and automated SMS reminders closed the loop.</p>
+		<div class="testimonial-logos">
+    		<img src="https://i.ibb.co/392FMjQ1/kalavrudhi.webp" alt="Client logo">
+  		</div>
+                <p class="tag">Kalavrudhi</p>
+                <h3>“Batch seats fill up before we announce the next season”</h3>
+                <p>Our brand grows widely in digital space, and students get to know us.</p>
             </article>
         </div>
     </section>
@@ -119,7 +139,7 @@
         <h2>What we take care of</h2>
         <div class="service-list">
             <article>
-                <i class="ph-bullseye"></i>
+                <i class="ph-pencil-circle"></i>
                 <h3>Ad setup & budgets</h3>
                 <p>We choose the right platform, audience, and daily spend.</p>
             </article>
@@ -146,40 +166,179 @@
             <h2>Let’s start with a friendly chat</h2>
             <p>Share a few details and we’ll send a free action plan within two business days.</p>
             <ul>
-                <li><i class="ph-phone-call"></i> +91 94888 11223</li>
-                <li><i class="ph-envelope"></i> hello@zourbamedia.com</li>
-                <li><i class="ph-map-pin"></i> Lakshmi Street, Erode</li>
+                <li><i class="ph-phone-call"></i> +91 99438 66609</li>
+                <li><i class="ph-envelope"></i> hello@zourba.in</li>
+                <li><i class="ph-map-pin"></i> Outer Ring road, Rangampalayam, Near Erode Arts & Science College</li>
             </ul>
         </div>
-        <form>
-            <label>
-                Your name
-                <input type="text" placeholder="Ravi Kumar">
-            </label>
-            <label>
-                Business name
-                <input type="text" placeholder="Kongu Furniture">
-            </label>
-            <label>
-                Monthly ad budget
-                <select>
-                    <option>₹10k – ₹25k</option>
-                    <option>₹25k – ₹50k</option>
-                    <option>₹50k – ₹1L</option>
-                    <option>₹1L+</option>
-                </select>
-            </label>
-            <label>
-                What do you want more of?
-                <textarea rows="3" placeholder="Walk-ins, phone calls, form fills..."></textarea>
-            </label>
-            <button type="submit" class="cta">Send my details</button>
-        </form>
+        <form action="https://formspree.io/f/xzzlkrod" method="POST">
+  <label>
+    Your name
+    <input type="text" name="name" required>
+  </label>
+  <label>
+    Business name
+    <input type="text" name="business" required>
+  </label>
+  <label>
+    Monthly ad budget
+    <select name="budget" required>
+      <option>₹10k – ₹25k</option>
+      <option>₹25k – ₹50k</option>
+      <option>₹50k – ₹1L</option>
+      <option>₹1L+</option>
+    </select>
+  </label>
+  <label>
+    What do you want more of?
+    <textarea name="message" rows="3" required></textarea>
+  </label>
+  <button type="submit" class="cta">Send my details</button>
+</form>
     </section>
 </main>
 
 <footer>
     <p>© <span id="year"></span> Zourba Media • Helping Erode businesses grow online.</p>
 </footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.image-slider .slider-track');
+  const slides = document.querySelectorAll('.image-slider .slider-slide');
+  if (!track || !slides.length) return;
+
+  let index = 0;
+  const slideDuration = 300;   // slide speed in ms (0.3s)
+  const waitDuration = 2000;   // wait 2s on each image
+
+  // set initial position
+  track.style.transform = 'translateX(0)';
+  track.style.transition = 'none';
+
+  function goToSlide(i) {
+    track.style.transition = `transform ${slideDuration}ms ease-out`;
+    track.style.transform = `translateX(-${i * 100}%)`;
+  }
+
+  function nextSlide() {
+    index = (index + 1) % slides.length;
+    goToSlide(index);
+  }
+
+  // loop: wait, slide, wait...
+  function startLoop() {
+    setInterval(nextSlide, waitDuration + slideDuration);
+  }
+
+  startLoop();
+});
+</script>
+
+<!-- Floating CTA -->
+<div class="floating-cta">
+  <a
+    href="https://wa.me/message/UIHO2I6BOQOJI1"
+    class="cta-whatsapp"
+    target="_blank"
+    rel="noopener"
+    aria-label="Chat on WhatsApp"
+  >
+    <i class="ph-whatsapp-logo"></i>
+  </a>
+
+  <a
+    href="tel:+919943866609"
+    class="cta-call"
+    aria-label="Call Zourba Media"
+  >
+    <i class="ph-phone-call"></i>
+  </a>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const canvas = document.getElementById('bg-particles');
+  const ctx = canvas.getContext('2d');
+
+  let w, h;
+  function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const mouse = { x: w / 2, y: h / 2 };
+  window.addEventListener('mousemove', (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  const PARTICLE_COUNT = 20;
+  const particles = [];
+
+  class Particle {
+    constructor() {
+      this.reset();
+      this.size = 3 + Math.random() * 3;
+      this.speed = 0.02 + Math.random() * 0.04; // how fast it swims toward cursor
+      this.orbit = 30 + Math.random() * 80;
+      this.angle = Math.random() * Math.PI * 2;
+    }
+    reset() {
+      this.x = Math.random() * w;
+      this.y = Math.random() * h;
+    }
+    update() {
+      // gently steer toward the mouse
+      const dx = mouse.x - this.x;
+      const dy = mouse.y - this.y;
+      const dist = Math.hypot(dx, dy) || 1;
+
+      // base target position near mouse
+      const targetX = mouse.x - (dx / dist) * this.orbit;
+      const targetY = mouse.y - (dy / dist) * this.orbit;
+
+      // interpolate toward target (smooth movement)
+      this.x += (targetX - this.x) * this.speed;
+      this.y += (targetY - this.y) * this.speed;
+
+      // small circular "fish" wobble
+      this.angle += 0.02;
+      this.x += Math.cos(this.angle) * 0.6;
+      this.y += Math.sin(this.angle) * 0.6;
+
+      // if off-screen too far, reset
+      if (this.x < -100 || this.x > w + 100 || this.y < -100 || this.y > h + 100) {
+        this.reset();
+      }
+    }
+    draw() {
+      const grd = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 2);
+      grd.addColorStop(0, 'rgba(129, 140, 248, 0.9)');
+      grd.addColorStop(1, 'rgba(5, 23, 42, 0)');
+      ctx.fillStyle = grd;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size * 2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push(new Particle());
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, w, h);
+    ctx.globalAlpha = 0.7;
+    for (const p of particles) {
+      p.update();
+      p.draw();
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
+});
+</script>
 </body>
 </html>
+

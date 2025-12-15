@@ -100,6 +100,39 @@ nav {
     margin-bottom: 1rem;
 }
 
+.hero-card.image-slider {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  align-items: stretch;   /* important */
+  justify-content: center;
+  min-height: 180px;      /* control box height */
+  background: #0b1120;
+}
+
+.slider-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* make image cover full box */
+  display: block;
+}
+
+/* mobile */
+@media (max-width: 960px) {
+  .hero-card.image-slider {
+    min-height: 160px;
+    margin-top: 1rem;
+  }
+}
+
 .hero-copy h1 {
     font-size: clamp(2rem, 4vw, 3rem);
     margin: 0 0 1rem;
@@ -148,14 +181,6 @@ nav {
     margin: 0;
     display: grid;
     gap: 0.6rem;
-}
-
-.hero-card-image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 14px;
-    margin-bottom: 1rem;
 }
 
 .hero-card li {
@@ -213,6 +238,27 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1rem;
     margin-top: 1.5rem;
+}
+
+testimonial-logos {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.testimonial-logos img {
+  height: 72px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* mobile tweak */
+@media (max-width: 640px) {
+  .testimonial-logos img {
+    height: 26px;
+  }
 }
 
 .proof-cards article {
@@ -304,18 +350,159 @@ footer {
     }
 }
 
-.slider-track {
+/* Floating CTA wrapper */
+.floating-cta {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
   display: flex;
-  width: 100%;
-  height: 100%;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
 }
 
-.slider-slide {
-  flex: 0 0 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+/* Base circle style */
+.floating-cta a {
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #020617;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  position: relative;
+  overflow: hidden;
 }
 
+/* WhatsApp main button */
+.cta-whatsapp {
+  background: radial-gradient(circle at 0 0, #4ade80, #16a34a);
+}
+
+/* Call button (smaller, secondary) */
+.cta-call {
+  background: radial-gradient(circle at 0 0, #38bdf8, #0ea5e9);
+  width: 46px;
+  height: 46px;
+}
+
+/* Icons */
+.floating-cta i {
+  font-size: 1.6rem;
+}
+
+/* Pulse effect on WhatsApp */
+.cta-whatsapp::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid rgba(34, 197, 94, 0.6);
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+
+/* Hover states (desktop) */
+@media (hover: hover) {
+  .floating-cta a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.7);
+  }
+}
+
+/* Pulse animation */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Mobile: keep it smaller and away from edges */
+@media (max-width: 640px) {
+  .floating-cta {
+    right: 12px;
+    bottom: 12px;
+    gap: 8px;
+  }
+
+  .floating-cta a {
+    width: 48px;
+    height: 48px;
+  }
+
+  .cta-call {
+    width: 42px;
+    height: 42px;
+  }
+
+  .floating-cta i {
+    font-size: 1.4rem;
+  }
+}
+
+#bg-particles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;          /* always behind */
+  pointer-events: none; /* never block clicks */
+}
+
+.site-header {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* desktop nav visible */
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.9rem;
+  color: ##000000;
+}
+
+.nav-toggle {
+  display: none; /* hide hamburger on desktop */
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: inline-flex;
+    /* other styles... */
+  }
+
+  .site-nav {
+    position: absolute;
+    inset-inline: 0;
+    top: 100%;
+    margin-top: 0.4rem;
+    padding: 0.5rem 1rem 0.8rem;
+    background: transparent;
+    display: none;          /* hidden until opened */
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial-logos img {
+    height: 62px;   /* same as desktop, or try 36px if you want bigger */
+  }
+}
 
